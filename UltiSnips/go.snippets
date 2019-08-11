@@ -113,3 +113,30 @@ if err != nil {
 	log.${1:Fatal}(err)
 }
 endsnippet
+
+# my custom snipset
+priority -40
+
+snippet ff "fmt.Fprintf(w, str, var)" b
+fmt.Fprintf(${1:w}, "${2:str}\n", ${3:var})
+endsnippet
+
+snippet fl "fmt.Fprintln(w, str)" b
+fmt.Fprintln(${1:w}, ${2:str})
+endsnippet
+
+snippet pf "fmt.Printf(str, var)" b
+fmt.Printf("${1:str}\n", ${2:var})
+endsnippet
+
+snippet pl "fmt.Println(str)" b
+fmt.Println(${1:str})
+endsnippet
+
+snippet sf "fmt.Sprintf(str, var)" b
+fmt.Sprintf("${1:str}\n", ${2:var})
+endsnippet
+
+snippet cont "continue" b
+continue
+endsnippet
