@@ -1,6 +1,6 @@
 # Snippets for Go
 
-priority -50
+priority -10
 
 # shorthand variable declaration
 snippet : "v := value"
@@ -242,15 +242,15 @@ func ${1:name}(${2:params})${3/(.+)/ /}`!p opening_par(snip, 3)`$3`!p closing_pa
 }
 endsnippet
 
-# Fmt Printf debug
-snippet ff "fmt.Printf(...)"
-fmt.Printf("${1:${VISUAL}} = %+v\n", $1)
-endsnippet
+# # Fmt Printf debug
+# snippet ff "fmt.Printf(...)"
+# fmt.Printf("${1:${VISUAL}} = %+v\n", $1)
+# endsnippet
 
-# Fmt Println debug
-snippet fn "fmt.Println(...)"
-fmt.Println("${1:${VISUAL}}")
-endsnippet
+# # Fmt Println debug
+# snippet fn "fmt.Println(...)"
+# fmt.Println("${1:${VISUAL}}")
+# endsnippet
 
 # Fmt Errorf debug
 snippet fe "fmt.Errorf(...)"
@@ -485,7 +485,7 @@ endglobal
 # vim:ft=snippets:
 
 # my custom snipset
-priority -40
+priority 10
 
 snippet ff "fmt.Fprintf(w, str, var)" b
 fmt.Fprintf(${1:w}, "${2:str}\n", ${3:var})
