@@ -65,8 +65,12 @@ ${VISUAL}$0
 #endif /* end of include guard: $1 */
 endsnippet
 
+# snippet fprintf "fprintf ..."
+# fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+# endsnippet
+
 snippet fprintf "fprintf ..."
-fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+fprintf(${1:stderr}, "${2:%s\n}" ,${3:var});
 endsnippet
 
 snippet eli "else if .. (eli)"
@@ -75,8 +79,12 @@ else if (${1:/* condition */}) {
 }
 endsnippet
 
+# snippet printf "printf .. (printf)"
+# printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+# endsnippet
+
 snippet printf "printf .. (printf)"
-printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+printf("${1:%s\n}" ,${2:var});
 endsnippet
 
 snippet st "struct"
@@ -146,4 +154,11 @@ ${1}($2){
 	${0}
 }
 endsnippet
+
+snippet if "if clause" b
+if (${1:/*condition*/}) {
+	${VISUAL}$0
+}
+endsnippet
+
 # vim:ft=snippets:
