@@ -154,8 +154,14 @@ snippet us
 'use strict'`!p snip.rv = semi(snip)`
 endsnippet
 
-snippet log
-console.log(${0});
+snippet log "console log"
+console.log(${0})
+endsnippet
+
+snippet fori "for int loop (fori)"
+for (let ${2:i} = 0; $2 < ${1:count}; ++$2) {
+	${VISUAL}$0
+}
 endsnippet
 
 # vim:ft=snippets:
