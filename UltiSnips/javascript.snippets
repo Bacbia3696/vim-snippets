@@ -155,7 +155,29 @@ snippet us
 endsnippet
 
 snippet cl "console log"
-console.log(${0})
+console.log($1);
+endsnippet
+
+snippet clc "console log with chalk"
+console.log(chalk.${1:property}($2));$0
+endsnippet
+
+snippet js "JSON stringify" w
+JSON.stringify(${1:object}, null, 2)
+endsnippet
+
+snippet aaf "async arrow function" w
+async (${1://params}) => {
+	${2://body}
+}
+endsnippet
+
+snippet tc "try catch block"
+try {
+	${1://do stuff}
+} catch(${2:ex}) {
+	${3://handle exception}
+}$0
 endsnippet
 
 snippet fori "for int loop (fori)"
@@ -163,5 +185,12 @@ for (let ${2:i} = 0; $2 < ${1:count}; ++$2) {
 	${VISUAL}$0
 }
 endsnippet
+
+snippet afun "function (named)" b
+async function ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2:argument}) {
+	${VISUAL}$0
+}
+endsnippet
+
 
 # vim:ft=snippets:
