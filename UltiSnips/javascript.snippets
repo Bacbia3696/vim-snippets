@@ -159,14 +159,14 @@ console.log($1);$0
 endsnippet
 
 snippet cld "console log debug"
-console.log("==========> ${1:var} is", $1)$0
+console.log("==========> ${1:var} is:", $1)$0
 endsnippet
 
 snippet clc "console log with chalk"
 console.log(chalk.${1:property}($2))$0
 endsnippet
 
-snippet js "JSON stringify" w
+snippet str "JSON stringify" w
 JSON.stringify(${1:object}, null, 2)$0
 endsnippet
 
@@ -176,8 +176,8 @@ async (${1://params}) => {
 }$0
 endsnippet
 
-snippet ame "async method" w
-async ${3:method_name}(${2://params}) {
+snippet am "async method" w
+async ${1:method_name}(${2://params}) {
 	${3://body}
 }$0
 endsnippet
