@@ -158,12 +158,12 @@ snippet cl "console log"
 console.log($1);$0
 endsnippet
 
-snippet clb "console log debug"
-console.log("==========> ${1:var} is", $1);$0
+snippet cld "console log debug"
+console.log("==========> ${1:var} is", $1)$0
 endsnippet
 
 snippet clc "console log with chalk"
-console.log(chalk.${1:property}($2));$0
+console.log(chalk.${1:property}($2))$0
 endsnippet
 
 snippet js "JSON stringify" w
@@ -172,6 +172,18 @@ endsnippet
 
 snippet aaf "async arrow function" w
 async (${1://params}) => {
+	${2://body}
+}$0
+endsnippet
+
+snippet ame "async method" w
+async (${1://params}) => {
+	${2://body}
+}$0
+endsnippet
+
+snippet af "arrow function" w
+(${1://params}) => {
 	${2://body}
 }$0
 endsnippet
