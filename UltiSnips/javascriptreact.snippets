@@ -1,3 +1,16 @@
 priority -50
 
 extends javascript
+
+snippet rfc "React function component" b
+import React from 'react';
+import './`!v expand('%:t:r')`.scss';
+
+const ${1:ComponentName} = (${2}) => {
+	${3}
+
+	return (${4})
+}
+
+export default ${1};
+endsnippet
