@@ -6,10 +6,8 @@ snippet rfc "React function component" b
 import React from 'react';
 import './`!v expand('%:t:r')`.scss';
 
-const ${1:ComponentName} = (${2}) => {
-	${3}
-
-	return (${4})
+const ${1:`!v expand('%:t:r')`} = () => {
+	return ${2}
 }
 
 export default ${1};

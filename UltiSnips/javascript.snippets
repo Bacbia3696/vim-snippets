@@ -159,11 +159,11 @@ console.log($1)$0
 endsnippet
 
 snippet clv "console log var"
-console.log("$1: ", $1)$0
+console.log("[`!p snip.rv=snip.fn`] $1: ", $1)$0
 endsnippet
 
-snippet clc "console log with chalk"
-console.log(chalk.${1:property}($2))$0
+snippet cljs "console log json"
+console.log("[`!p snip.rv=snip.fn`] $1: ", JSON.stringify($1, null, 2))$0
 endsnippet
 
 snippet str "JSON stringify" w
@@ -212,5 +212,16 @@ snippet imp "import statement" b
 import {$2} from "$1";
 endsnippet
 
+snippet alv "alert var" w
+alert(JSON.stringify(${1:var}, null, 2))$0
+endsnippet
+
+snippet jsv "stringify var" w
+JSON.stringify(${1:var}, null, 2)$0
+endsnippet
+
+snippet prev "pre var" w
+<pre>{JSON.stringify(${1:var}, null, 2)}</pre>
+endsnippet
 
 # vim:ft=snippets:
