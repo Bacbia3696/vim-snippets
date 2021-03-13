@@ -115,8 +115,8 @@ if err != nil {
 endsnippet
 
 # my custom snippet
-snippet pv "fmt.Printf(var)" b
-fmt.Printf("${1:var}: %v\n", ${1:var})
+snippet pv "fmt.Println(var: var)" b
+fmt.Println("${1:var}: ", ${1:var})
 endsnippet
 
 snippet pl "fmt.Println(str)" b
